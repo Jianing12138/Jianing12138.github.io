@@ -1,2 +1,2 @@
 # Homepage
-This is my personal website: cen-jun.com. Go live on August 29, 2021.
+This is my personal website: Jianing12138.github.io. Last modified on 10 October, 2025.
