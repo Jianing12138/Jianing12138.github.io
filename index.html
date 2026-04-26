@@ -74,6 +74,44 @@
         top: 0;
         white-space: nowrap;
     }
+.pub-left img.intro-img {
+      width: 120px !important;       
+      height: 160px !important;      
+      /* 改为 contain，保证不管横图竖图都能完整显示不被乱裁 */
+      object-fit: contain !important;  
+      background-color: #ffffff;     /* 空白处用白色填充 */
+      padding: 3px !important;       /* 加一点内边距，像个相框 */
+      border: 1px solid #ddd !important; 
+      border-radius: 2px !important; 
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* 阴影调柔和 */
+    }
+
+    /* 2. 左侧图片容器加一点右边距，让图文不要太挤 */
+    .pub-left {
+      width: 145px !important; 
+      flex-shrink: 0;
+      margin-right: 20px !important; 
+    }
+
+    /* 3. 整体条目：改为【顶部对齐】(flex-start)，解决文字悬空问题 */
+    .pub {
+      display: flex;
+      align-items: flex-start !important; /* 关键：顶部对齐 */
+      margin-bottom: 30px !important; 
+    }
+
+    /* 4. 右侧文字块：控制行间距 */
+    .pub-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: -2px; /* 微调标题与图片顶部的对齐 */
+    }
+    
+    /* 5. 稍微优化右侧文字的间距 */
+    .pub-right .title { margin-bottom: 6px; line-height: 1.3; }
+    .pub-right .authors { margin-bottom: 4px; }
+    .pub-right .publish { margin-bottom: 4px; }
   </style>
   
 
@@ -298,7 +336,7 @@ I'm always looking for related collaboration. If you are interested to chat with
       <div class="timeline-item">
         <div class="timeline-date">
           <img class="social-icon" src="images/cityu.png"/>
-          Jan, 2025 - Now
+          Jan, 2025 - Dec, 2025
         </div>
         <div class="timeline-title">
           Research Assistant @ <a href="https://www.cityu.edu.hk/" target="_blank">CityU</a>
@@ -323,7 +361,29 @@ I'm always looking for related collaboration. If you are interested to chat with
 
 <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/Predefined.png">
+            <img class="intro-img frame" src="images/onlinegame.png">
+          </div>
+          <div class="pub-right">
+            <div class="title">
+              Continuous-Time Distributed Seeking for Variational Generalized Nash Equilibrium of Online Game
+            </div>
+            <div class="authors">
+              <font style="font-size: 11pt;">
+                <b>Jianing Chen</b>, Sichen Qian, Chuangyin Dang, Sitian Qin
+              </font>
+            </div>
+            <div class="publish">
+              <span class="place">IEEE TAC (Regular Paper) 2026</span>
+            </div>
+            <div class="tags">
+              [<a class="tag" href="https://ieeexplore.ieee.org/document/11479678" target="_blank">Paper</a>]
+            </div>
+          </div>
+        </div>
+
+<div class="pub" data-selected="true">
+          <div class="pub-left">
+            <img class="intro-img frame" src="images/ISA.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -345,7 +405,7 @@ I'm always looking for related collaboration. If you are interested to chat with
 
 <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/EL.png">
+            <img class="intro-img frame" src="images/NN.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -367,7 +427,7 @@ I'm always looking for related collaboration. If you are interested to chat with
 
 <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/fully.png">
+            <img class="intro-img frame" src="images/TCYB.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -389,7 +449,7 @@ I'm always looking for related collaboration. If you are interested to chat with
 
 <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/cloud.png">
+            <img class="intro-img frame" src="images/IISE.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -412,7 +472,7 @@ I'm always looking for related collaboration. If you are interested to chat with
   <div class="pub-list">
         <div class="pub">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/robust.png">
+            <img class="intro-img frame" src="images/ROBUST1.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -435,7 +495,7 @@ I'm always looking for related collaboration. If you are interested to chat with
         
         <div class="pub">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/normal-form.png">
+            <img class="intro-img frame" src="images/NORMAL.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -457,7 +517,7 @@ I'm always looking for related collaboration. If you are interested to chat with
         
         <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/unbalanced.png">
+            <img class="intro-img frame" src="images/TAC.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -479,7 +539,7 @@ I'm always looking for related collaboration. If you are interested to chat with
         
         <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/adaptive.png">
+            <img class="intro-img frame" src="images/AUTO.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -498,32 +558,10 @@ I'm always looking for related collaboration. If you are interested to chat with
             </div>
           </div>
         </div>
-
-        <div class="pub">
-          <div class="pub-left">
-            <img class="intro-img frame" src="images/online.png">
-          </div>
-          <div class="pub-right">
-            <div class="title">
-              Continuous-time online distributed seeking for generalized Nash equilibrium of nonmonotone online game
-            </div>
-            <div class="authors">
-              <font style="font-size: 11pt;">
-                <b>Jianing Chen</b>, Sichen Qian, Chuangyin Dang, Sitian Qin
-              </font>
-            </div>
-            <div class="publish">
-              <span class="place">Arxiv 2024</span>
-            </div>
-            <div class="tags">
-              [<a class="tag" href="https://arxiv.org/pdf/2409.04765" target="_blank">Paper</a>]
-            </div>
-          </div>
-        </div>
         
         <div class="pub">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/high.png">
+            <img class="intro-img frame" src="images/ICICIP.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -545,7 +583,7 @@ I'm always looking for related collaboration. If you are interested to chat with
         
         <div class="pub" data-selected="true">
           <div class="pub-left">
-            <img class="intro-img frame" src="images/flock.png">
+            <img class="intro-img frame" src="images/TNSE.png">
           </div>
           <div class="pub-right">
             <div class="title">
@@ -567,7 +605,7 @@ I'm always looking for related collaboration. If you are interested to chat with
 
         <div class="pub" data-selected="true">
       <div class="pub-left">
-        <img class="intro-img frame" src="images/deadzone.png">
+        <img class="intro-img frame" src="images/IS.png">
       </div>
       <div class="pub-right">
         <div class="title">
@@ -602,30 +640,6 @@ I'm always looking for related collaboration. If you are interested to chat with
 </div>
 	
 <!-- JavaScript to handle button clicks -->
-<script>
-  // Get the buttons and publications
-  const showSelectedBtn = document.getElementById('show-selected-btn');
-  const showAllBtn = document.getElementById('show-all-btn');
-  const publications = document.querySelectorAll('.pub');
-
-  // Add event listener to 'Show Selected Publication' button
-  showSelectedBtn.addEventListener('click', function() {
-    publications.forEach(pub => {
-      if (pub.getAttribute('data-selected') === 'true') {
-        pub.style.display = 'block';  // Show selected publication
-      } else {
-        pub.style.display = 'none';  // Hide other publications
-      }
-    });
-  });
-
-  // Add event listener to 'Show All' button
-  showAllBtn.addEventListener('click', function() {
-    publications.forEach(pub => {
-      pub.style.display = 'block';  // Show all publications
-    });
-  });
-</script>
 
 <script>
   const repos = [
@@ -792,6 +806,35 @@ I'm always looking for related collaboration. If you are interested to chat with
     <div class="back-to-top">Top</div>
 
 
+<script>
+  const showSelectedBtn = document.getElementById('show-selected-btn');
+  const showAllBtn = document.getElementById('show-all-btn');
+  const publications = document.querySelectorAll('.pub');
+
+  // 1. 点击 Show Representative 按钮的逻辑
+  showSelectedBtn.addEventListener('click', function() {
+    publications.forEach(pub => {
+      if (pub.getAttribute('data-selected') === 'true') {
+        pub.style.display = 'flex';  // 注意：这里必须用 flex
+      } else {
+        pub.style.display = 'none';  // 隐藏其他的
+      }
+    });
+  });
+
+  // 2. 点击 Show All 按钮的逻辑
+  showAllBtn.addEventListener('click', function() {
+    publications.forEach(pub => {
+      pub.style.display = 'flex';    // 全部恢复为 flex 布局
+    });
+  });
+
+  // 3. 关键：网页加载完成后，自动触发一次 "Show Representative" 点击事件
+  document.addEventListener("DOMContentLoaded", function() {
+    showSelectedBtn.click();
+  });
+</script>
+
 <script type="text/javascript">
 jQuery(document).ready(function() {
     var offset = 220;
@@ -801,7 +844,6 @@ jQuery(document).ready(function() {
             jQuery('.back-to-top').fadeIn(duration);
         } else {
             jQuery('.back-to-top').fadeOut(duration);
-    
         }
     });
     jQuery('.back-to-top').click(function(event) {
